@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/phialsbasement-pagespeed-mcp-server-badge.png)](https://mseep.ai/app/phialsbasement-pagespeed-mcp-server)
+
 # PageSpeed MCP Server
 [![smithery badge](https://smithery.ai/badge/mcp-pagespeed-server)](https://smithery.ai/server/mcp-pagespeed-server)
 
