@@ -32,7 +32,10 @@ Add the PageSpeed MCP to your AI assistant's(claude in this case) configuration 
 {
     "pagespeed": {
         "command": "node",
-        "args": ["path/to/mcp-pagespeed-server/dist/index.js"]
+        "args": ["path/to/mcp-pagespeed-server/dist/index.js"],
+        "env": {
+           "GOOGLE_API_KEY": "<YOUR-API-KEY>"
+        }
     }
 }
 ```

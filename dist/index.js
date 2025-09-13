@@ -29,8 +29,9 @@ const server = new Server({
 });
 async function runPageSpeedTest(params) {
     const { url, strategy, category, locale, apiKey } = params;
+    const effectiveApiKey = apiKey || process.env.GOOGLE_API_KEY;
     const categoriesParam = category.join('&category=');
-    const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${strategy}&category=${categoriesParam}&locale=${locale}${apiKey ? `&key=${apiKey}` : ''}`;
+    const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${strategy}&category=${categoriesParam}&locale=${locale}${effectiveApiKey ? `&key=${effectiveApiKey}` : ''}`;
     const response = await fetch(apiUrl);
     if (!response.ok) {
         throw new Error(`PageSpeed API error: ${response.statusText}`);
